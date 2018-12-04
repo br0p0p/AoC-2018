@@ -1,0 +1,15 @@
+{
+    "name": "AoC18",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "devDependencies": {
+        "prettier": "^1.15.3"
+    },
+    "scripts": {
+        "format": "prettier --write './**/*.{js,md,jsx,css,scss,json}'"
+    },
+    "dependencies": {
+        "ramda": "^0.26.1"
+    }
+}
