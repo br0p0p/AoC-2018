@@ -3,7 +3,7 @@
 const path = require('path');
 const R = require('ramda');
 const { includes, map, split, trim } = R;
-const { compact, readFileToString } = require('../helpers.js');
+const { compact, isNumeric, readFileToString } = require('../helpers.js');
 
 const create2dArray = (w, h, p = undefined) => {
     const col = new Array();
@@ -34,8 +34,6 @@ const print2dArray = arr => {
 
 const PLACEHOLDER = '.';
 const OVERLAPPING_CLAIM = 'X';
-
-const isNumeric = n => parseFloat(n) !== NaN;
 
 const countIn2dArray = (arr2d, needle = OVERLAPPING_CLAIM) => {
     return arr2d.reduce((acc, col) => {

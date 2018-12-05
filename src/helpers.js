@@ -6,6 +6,8 @@ const readFileToString = async filePath => {
     return await _f(filePath, { encoding: 'UTF-8' });
 };
 
+const isNumeric = n => parseFloat(n) !== NaN;
+
 // Remove falsy values from an array.
 const compact = (arr = []) => {
     return arr.reduce((acc, val) => {
@@ -18,5 +20,6 @@ const compact = (arr = []) => {
 
 module.exports = {
     compact,
+    isNumeric,
     readFileToString
 };
