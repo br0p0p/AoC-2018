@@ -6,6 +6,7 @@ const readFileToString = async filePath => {
     return await _f(filePath, { encoding: 'UTF-8' });
 };
 
+// Remove falsy values from an array.
 const compact = (arr = []) => {
     return arr.reduce((acc, val) => {
         if (val !== undefined && val != null && val !== '') {
